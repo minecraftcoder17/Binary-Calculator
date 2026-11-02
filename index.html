@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Binary Calculator</title>
     <style>
-        body {font-family: monospace, monospace; width: 50%; text-align: center;  margin: 0 auto; font-size: 200%}
-        button {font-size: 2; border-radius: 0;}
+        body {font-family: monospace, monospace; width: 50%; text-align: center;  margin: 0 auto; font-size: 200%; user-select: none}
+        button {font-size: 2; border-radius: 0; scale: 150%; user-select: none}
         html {zoom: 2;}
-    </style>
+        a {color: inherit;}    </style>
 </head>
 <body>
-    Binary Calculator <br>
+    <a href="https://www.britannica.com/science/binary-number-system">Binary Calculator</a> <br>
 
     <br>
     <button id="one" onclick=add(1)>1</button> <button id="zero" onclick="add(0)">0</button><br>
-    <button id="plus" onclick="add('+')">+</button> <button id="minus" onclick="add('-')">-</button> <button id="dot" onclick="add('.')">.</button><br>
-    <button id="clear" onclick="clearbox()">Clear</button> <button id="enter" onclick="enter()">Enter</button><br><br><br>
+    <button id="plus" onclick="add('+')">+</button> <button id="minus" onclick="add('-')">-</button> <button id="dot" onclick="add('.')">.</button> <button id="enter" onclick="enter()">=</button><br>
+    <button id="clear" onclick="clearbox()">Clear</button> <br><br><br>
     <div id="inputbox"></div>
     
     
@@ -52,6 +52,10 @@
 
 
     function enter(){
+
+        if(lastinputfunction){
+ document.getElementById("inputbox").innerHTML = document.getElementById("inputbox").innerHTML.slice(0, -1)
+        }
         running+=current*sign
         document.getElementById("inputbox").append(' = ')
         document.getElementById("inputbox").append(tobinary(running))
@@ -98,5 +102,6 @@
         }
     }
     </script>
+
 </body>
 </html>
