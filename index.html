@@ -4,8 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Binary Calculator</title>
+    <style>
+        body {font-family: monospace, monospace; width: 50%; text-align: center;  margin: 0 auto; font-size: 200%}
+        button {font-size: 2;}
+    </style>
 </head>
 <body>
-    <p> calculator</p>
+    <br>
+    <p>Binary Calculator</p>
+    <button id="one" onclick="add(1)">1</button> <button id="zero">0</button><br>
+    <button id="plus">+</button> <button id="minus">-</button><br>
+    <button id="clear">Clear</button><br><br><br>
+    <div id="inputbox"></div>
+    
+    
+    
+    <script>
+    var input = 1
+    function add(x){
+        document.getElementById("inputbox").append(x)
+    }
+    document.getElementById("inputbox").add
+    document.getElementById("inputbox").append(23)
+    </script>
 </body>
 </html>
